@@ -24,24 +24,24 @@ import java.util.List;
  */
 public class Sensor implements Serializable {
 
-	public Sensor(String sensorId, List<SpeedData> speedData) {
+	public Sensor(String sensorId, List<SensorMetric> sensorMetrics) {
 		this.sensorId = sensorId;
-		this.speedData = speedData;
+		this.sensorMetrics = sensorMetrics;
 	}
 
 	public String getSensorId() {
 		return sensorId;
 	}
 
-	public List<SpeedData> getSpeedData() {
-		return speedData;
+	public List<SensorMetric> getSensorMetrics() {
+		return sensorMetrics;
 	}
 
-	public void setSpeedData(List<SpeedData> speedData) {
-		this.speedData = speedData;
+	public void setSensorMetric(List<SensorMetric> sensorMetrics) {
+		this.sensorMetrics = sensorMetrics;
 	}
 
 	private String sensorId;
-	private List<SpeedData> speedData;
+	private List<SensorMetric> sensorMetrics;
 
 }

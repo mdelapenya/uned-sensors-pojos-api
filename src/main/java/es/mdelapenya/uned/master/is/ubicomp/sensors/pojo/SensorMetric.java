@@ -21,12 +21,12 @@ import java.io.Serializable;
 /**
  * @author Manuel de la Peña
  */
-public class SpeedData implements Serializable {
+public class SensorMetric implements Serializable {
 
-	public SpeedData() {
+	public SensorMetric() {
 	}
 
-	public SpeedData(
+	public SensorMetric(
 		String sensorId, double latitude, double longitude, double speed,
 		long timestamp) {
 

@@ -19,7 +19,7 @@ package es.mdelapenya.uned.master.is.ubicomp.sensors.pojo;
 /**
  * @author Manuel de la Peña
  */
-public class SensorRow extends SpeedData {
+public class SensorRow extends SensorMetric {
 
 	public SensorRow() {
 	}

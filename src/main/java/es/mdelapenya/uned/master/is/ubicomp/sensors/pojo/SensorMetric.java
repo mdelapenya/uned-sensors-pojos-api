@@ -129,7 +129,7 @@ public class SensorMetric implements Serializable {
 		sb.append(ESCAPED_QUOTE);
 		sb.append(":");
 		sb.append(ESCAPED_QUOTE);
-		sb.append(getMetric());
+		sb.append(getMetricUnits());
 		sb.append(ESCAPED_QUOTE);
 
 		sb.append(", ");

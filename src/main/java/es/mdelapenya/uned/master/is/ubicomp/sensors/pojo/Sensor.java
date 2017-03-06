@@ -22,14 +22,13 @@ import java.util.List;
 /**
  * @author Manuel de la Peña
  */
-public class Sensor implements Metric, Serializable {
+public class Sensor implements Serializable {
 
 	public Sensor(String sensorId, List<SensorMetric> sensorMetrics) {
 		this.sensorId = sensorId;
 		this.sensorMetrics = sensorMetrics;
 	}
 
-	@Override
 	public String getSensorId() {
 		return sensorId;
 	}

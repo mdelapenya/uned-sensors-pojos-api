@@ -21,7 +21,7 @@ import java.io.Serializable;
 /**
  * @author Manuel de la Peña
  */
-public class SensorMetric implements Serializable {
+public class SensorMetric implements Metric, Serializable {
 
 	public SensorMetric() {
 	}
@@ -54,6 +54,7 @@ public class SensorMetric implements Serializable {
 		return longitude;
 	}
 
+	@Override
 	public String getSensorId() {
 		return sensorId;
 	}

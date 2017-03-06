@@ -16,33 +16,11 @@
 
 package es.mdelapenya.uned.master.is.ubicomp.sensors.pojo;
 
-import java.io.Serializable;
-import java.util.List;
-
 /**
  * @author Manuel de la Peña
  */
-public class Sensor implements Metric, Serializable {
+public interface Metric {
 
-	public Sensor(String sensorId, List<SensorMetric> sensorMetrics) {
-		this.sensorId = sensorId;
-		this.sensorMetrics = sensorMetrics;
-	}
-
-	@Override
-	public String getSensorId() {
-		return sensorId;
-	}
-
-	public List<SensorMetric> getSensorMetrics() {
-		return sensorMetrics;
-	}
-
-	public void setSensorMetric(List<SensorMetric> sensorMetrics) {
-		this.sensorMetrics = sensorMetrics;
-	}
-
-	private String sensorId;
-	private List<SensorMetric> sensorMetrics;
+	String getSensorId();
 
 }

@@ -27,10 +27,12 @@ public class SensorMetric implements Serializable {
 	}
 
 	public SensorMetric(
-		String sensorId, double latitude, double longitude, double metric,
-		String metricName, String metricUnits, long timestamp) {
+		String sensorId, String applicationId, double latitude,
+		double longitude, double metric, String metricName, String metricUnits,
+		long timestamp) {
 
 		this.sensorId = sensorId;
+		this.applicationId = applicationId;
 		this.latitude = latitude;
 		this.longitude = longitude;
 		this.metric = metric;
@@ -38,6 +40,10 @@ public class SensorMetric implements Serializable {
 		this.metricUnits = metricUnits;
 		this.timestamp = timestamp;
 
+	}
+
+	public String getApplicationId() {
+		return applicationId;
 	}
 
 	public double getLatitude() {
@@ -149,6 +155,7 @@ public class SensorMetric implements Serializable {
 
 	private static final String ESCAPED_QUOTE = "\"";
 
+	private String applicationId;
 	private double latitude;
 	private double longitude;
 	private double metric;

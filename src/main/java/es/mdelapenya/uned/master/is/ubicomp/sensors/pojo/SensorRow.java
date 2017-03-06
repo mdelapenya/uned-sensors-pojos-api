@@ -25,12 +25,13 @@ public class SensorRow extends SensorMetric {
 	}
 
 	public SensorRow(
-		String id, String sensorId, double latitude, double longitude,
-		double metric, String metricName, String metricUnits, long timestamp) {
+		String id, String sensorId, String applicationId, double latitude,
+		double longitude, double metric, String metricName, String metricUnits,
+		long timestamp) {
 
 		super(
-			sensorId, latitude, longitude, metric, metricName, metricUnits,
-			timestamp);
+			sensorId, applicationId, latitude, longitude, metric, metricName,
+			metricUnits, timestamp);
 
 		this.id = id;
 	}

@@ -16,11 +16,8 @@
 
 package es.mdelapenya.uned.master.is.ubicomp.sensors.pojo;
 
-import org.springframework.http.ResponseEntity;
-
 import java.io.Serializable;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * @author Manuel de la Peña
@@ -42,10 +39,6 @@ public class Sensor implements Serializable {
 
 	public void setSpeedData(List<SpeedData> speedData) {
 		this.speedData = speedData;
-	}
-
-	public Optional<ResponseEntity<Object>> map(Object o) {
-		return null;
 	}
 
 	private String sensorId;

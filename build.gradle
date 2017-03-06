@@ -1,0 +1,33 @@
+group 'es.mdelapenya.uned.master.is.ubicomp.sensors.pojo.api'
+version '1.0-SNAPSHOT'
+
+buildscript {
+  repositories {
+    mavenLocal()
+    mavenCentral()
+  }
+}
+
+apply plugin: 'idea'
+apply plugin: 'java'
+
+jar {
+  baseName = 'sensors-pojo-api'
+  version =  '1.0-SNAPSHOT'
+}
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+  maven {
+    url "https://jitpack.io"
+  }
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '3.2.1'
+}
+

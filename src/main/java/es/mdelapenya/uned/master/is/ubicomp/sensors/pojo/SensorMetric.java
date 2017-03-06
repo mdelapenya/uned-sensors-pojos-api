@@ -27,13 +27,14 @@ public class SensorMetric implements Serializable {
 	}
 
 	public SensorMetric(
-		String sensorId, double latitude, double longitude, double speed,
-		long timestamp) {
+		String sensorId, double latitude, double longitude, double metric,
+		String metricName, long timestamp) {
 
 		this.sensorId = sensorId;
 		this.latitude = latitude;
 		this.longitude = longitude;
-		this.speed = speed;
+		this.metric = metric;
+		this.metricName = metricName;
 		this.timestamp = timestamp;
 
 	}
@@ -50,8 +51,12 @@ public class SensorMetric implements Serializable {
 		return sensorId;
 	}
 
-	public double getSpeed() {
-		return speed;
+	public double getMetric() {
+		return metric;
+	}
+
+	public String getMetricName() {
+		return metricName;
 	}
 
 	public long getTimestamp() {
@@ -95,11 +100,21 @@ public class SensorMetric implements Serializable {
 		sb.append(", ");
 
 		sb.append(ESCAPED_QUOTE);
-		sb.append("speed");
+		sb.append("metricName");
 		sb.append(ESCAPED_QUOTE);
 		sb.append(":");
 		sb.append(ESCAPED_QUOTE);
-		sb.append(getSpeed());
+		sb.append(getMetricName());
+		sb.append(ESCAPED_QUOTE);
+
+		sb.append(", ");
+
+		sb.append(ESCAPED_QUOTE);
+		sb.append("metric");
+		sb.append(ESCAPED_QUOTE);
+		sb.append(":");
+		sb.append(ESCAPED_QUOTE);
+		sb.append(getMetric());
 		sb.append(ESCAPED_QUOTE);
 
 		sb.append(", ");
@@ -121,8 +136,9 @@ public class SensorMetric implements Serializable {
 
 	private double latitude;
 	private double longitude;
+	private double metric;
+	private String metricName;
 	private String sensorId;
-	private double speed;
 	private long timestamp;
 
 }

@@ -11,6 +11,10 @@ buildscript {
 apply plugin: 'idea'
 apply plugin: 'java'
 
+dependencies {
+  compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.5.4'
+}
+
 jar {
   baseName = 'sensors-pojo-api'
   version =  '1.0-SNAPSHOT'

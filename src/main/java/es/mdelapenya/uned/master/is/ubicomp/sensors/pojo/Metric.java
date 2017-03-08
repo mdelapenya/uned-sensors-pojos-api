@@ -16,9 +16,21 @@
 
 package es.mdelapenya.uned.master.is.ubicomp.sensors.pojo;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 /**
  * @author Manuel de la Peña
  */
+@JsonTypeInfo(
+	use = JsonTypeInfo.Id.NAME,
+	include = JsonTypeInfo.As.PROPERTY,
+	property = "type",
+	defaultImpl = SensorMetric.class
+)
+@JsonSubTypes({
+	@JsonSubTypes.Type(value = SensorMetric.class, name = "sensormetric")
+})
 public interface Metric {
 
 	String getSensorId();

@@ -112,6 +112,16 @@ public class SensorMetric implements Metric, Serializable {
 		sb.append(", ");
 
 		sb.append(ESCAPED_QUOTE);
+		sb.append("applicationId");
+		sb.append(ESCAPED_QUOTE);
+		sb.append(":");
+		sb.append(ESCAPED_QUOTE);
+		sb.append(getApplicationId());
+		sb.append(ESCAPED_QUOTE);
+
+		sb.append(", ");
+
+		sb.append(ESCAPED_QUOTE);
 		sb.append("metricName");
 		sb.append(ESCAPED_QUOTE);
 		sb.append(":");

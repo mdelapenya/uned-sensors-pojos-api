@@ -77,7 +77,7 @@ public class SensorMetric implements Metric, Serializable {
 
 	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder(41);
+		StringBuilder sb = new StringBuilder(33);
 
 		sb.append("{");
 
@@ -85,9 +85,7 @@ public class SensorMetric implements Metric, Serializable {
 		sb.append("latitude");
 		sb.append(ESCAPED_QUOTE);
 		sb.append(":");
-		sb.append(ESCAPED_QUOTE);
 		sb.append(getLatitude());
-		sb.append(ESCAPED_QUOTE);
 
 		sb.append(", ");
 
@@ -95,9 +93,7 @@ public class SensorMetric implements Metric, Serializable {
 		sb.append("longitude");
 		sb.append(ESCAPED_QUOTE);
 		sb.append(":");
-		sb.append(ESCAPED_QUOTE);
 		sb.append(getLongitude());
-		sb.append(ESCAPED_QUOTE);
 
 		sb.append(", ");
 
@@ -135,9 +131,7 @@ public class SensorMetric implements Metric, Serializable {
 		sb.append("metric");
 		sb.append(ESCAPED_QUOTE);
 		sb.append(":");
-		sb.append(ESCAPED_QUOTE);
 		sb.append(getMetric());
-		sb.append(ESCAPED_QUOTE);
 
 		sb.append(", ");
 
@@ -155,9 +149,7 @@ public class SensorMetric implements Metric, Serializable {
 		sb.append("timestamp");
 		sb.append(ESCAPED_QUOTE);
 		sb.append(":");
-		sb.append(ESCAPED_QUOTE);
 		sb.append(getTimestamp());
-		sb.append(ESCAPED_QUOTE);
 
 		sb.append("}");
 
